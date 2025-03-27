@@ -1,0 +1,665 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer le contenu */
+    gap: 20px; /* Espacement entre les éléments */
+	margin-bottom: 100px;
+}
+
+#portfolio h2 {
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+.logo {
+    width: 40px; /* Ajuste la taille du logo */
+    height: auto;
+}
+
+.modified-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.filter {
+    background: transparent;
+    border: 2px solid #1D6154;
+    color: #1D6154;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+	margin-bottom: 40px;
+}
+
+.filter.active {
+    background: #1D6154;
+    color: white;
+}
+
+.filter:hover {
+    background: #1D6154;
+    color: white;
+}
+
+
+li a {
+    text-decoration: inherit; /* Hérite du style du <li> */
+    color: inherit; /* Garde la couleur du texte du parent */
+    font-weight: inherit; /* Hérite du style du texte du <li> */
+}
+
+.active {
+    font-weight: bold;
+}
+
+
+
+.login-page {
+
+    color: #1D6154; /* Le vert que tu veux */
+    font-size: 30px; /* Taille du texte comme tu veux */
+    font-weight: bold; /* En gras */
+    text-align: center; /* Centrer horizontalement */
+    margin-top: 100px; /* Ajuster l'espace au-dessus du titre */
+}
+
+
+
+
+
+/* Centrage du formulaire */
+.login-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+/* Style du titre */
+.login-page {
+    font-size: 24px;
+    color: #16543B; /* Vert foncé */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.login-main .error {
+	height: 15px;
+}
+
+/* Style du formulaire */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Conteneur des inputs */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.input-container label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Champs du formulaire */
+.input-container input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    outline: none;
+}
+
+/* Bouton de connexion */
+button {
+    background-color: #16543B; /* Vert foncé */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #10432E; /* Légèrement plus foncé au survol */
+}
+
+/* Lien mot de passe oublié */
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #16543B;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Styles de la modale */
+.modal {
+    display: none;
+    position: fixed; /* Fixe la modale sur tout l'écran */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Contenu de la modale */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%; /* Taille fixe */
+    height: 80%; /* Hauteur fixe */
+    position: relative;
+    min-height: fit-content;
+}
+
+
+
+/* Fermer la modale */
+.close-btn-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+h2 {
+    font-family: 'Work Sans', sans-serif; 
+    font-weight: 400;                    
+    font-size: 26px;                     
+    line-height: 30.5px;                   
+    letter-spacing: 0%;                   
+    text-align: center;                   
+    color: black;   
+	margin-bottom: 50px;        
+                  
+}
+
+
+.vignette-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, auto);  /* Utilise 'auto' pour ajuster la largeur des colonnes en fonction des vignettes */
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;  /* Espace global entre les vignettes (horizontal et vertical) */
+    margin-top: 60px;
+    margin-bottom: 30px;
+	row-gap: 30px;
+}
+
+
+.vignette-gallery .vignette {
+    width: 76.61px;
+    height: 102.57px;
+}
+
+.vignette-gallery img {
+    width: 76.86px;    /* Largeur ajustée */
+    height: 102.57px;  /* Hauteur ajustée */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+.separator {
+    width: 80%;
+    height: 1px;
+    background-color: lightgray;
+    margin: 15px auto;
+}
+
+
+
+.vignette {
+    position: relative; /* Pour pouvoir positionner l'icône par rapport à l'image */
+    width: 76.61px; /* Largeur de la vignette */
+    height: 102.57px; /* Hauteur de la vignette */
+    margin-bottom: 20px; /* Espacement entre les vignettes */
+	overflow: hidden;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 2px;  /* Moins d'espace en haut */
+    right: 2px; /* Moins d'espace à droite */
+    font-size: 12px; /* Taille plus petite */
+    color: black;
+    background-color: white; /* Ajoute un fond blanc */
+    border-radius: 50%; /* Rend l'icône circulaire */
+    padding: 3px; /* Ajuste la taille */
+    cursor: pointer;
+}
+
+
+.delete-icon:hover {
+    color: darkgray; /* Change la couleur lors du survol */
+}
+
+.vignette img {
+    width: 100%; /* L'image prend toute la largeur de la vignette */
+    height: auto; /* Ajuste la hauteur en fonction de la largeur */
+    object-fit: cover; /* L'image couvre toute la vignette sans déformation */
+}
+
+
+#add-photo {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 40%;
+    margin-left: 28%;
+}
+
+
+/* HEADER DE LA MODALE */
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+
+
+#return-first-modal {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 14px;
+    color: black;
+    background: transparent;  /* Assure-toi que le fond est transparent */
+    border: none;             /* Retirer la bordure du bouton */
+    padding: 0;               /* Enlever l'espace autour du texte */
+    cursor: pointer;         /* Garde l'icône de la souris */
+    outline: none;            /* Retirer l'outline quand il est cliqué */
+    box-shadow: none;         /* Enlever toute ombre qui pourrait être appliquée */
+    }
+      
+
+#close-add-photo-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: black;
+    background: transparent;  /* Assure-toi que le fond est transparent */
+    border: none;             /* Retirer la bordure du bouton */
+    padding: 0;               /* Enlever l'espace autour du texte */
+    cursor: pointer;         /* Garde l'icône de la souris */
+    outline: none;            /* Retirer l'outline quand il est cliqué */
+    box-shadow: none;         /* Enlever toute ombre qui pourrait être appliquée */
+}
+
+
+
+/* ZONE D'AJOUT D'IMAGE */
+.photo-upload-container {
+    width: 330px;
+    height: 139px;
+    background: #E8ECF1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+.photo-upload-container i {
+    font-size: 50px;
+    color: #B3B8BE;
+}
+
+.photo-upload-container p {
+    font-size: 14px;
+    color: #6B7280;
+    margin: 5px 0;
+}
+
+.photo-upload-container .upload-button {
+    background: white;
+    border: 2px solid #B3B8BE;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #6B7280;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FORMULAIRE */
+#add-photo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Réduire l'espace entre les éléments */
+    font-size: 12px; /* Réduire la taille de la police pour tous les éléments */
+    align-items: center; /* Centre les éléments horizontalement */
+}
+
+
+#add-photo-form input,
+#add-photo-form select {
+    font-size: 12px;   /* Taille de police plus petite */
+    padding: 5px;      /* Réduire les espacements internes */
+    width: 420px;      /* Largeur des éléments */
+    box-sizing: border-box; /* Inclut padding et bordure dans la largeur totale */
+    margin: 0 auto;    /* Centrer horizontalement les éléments */
+    max-width: 100%;
+}
+
+#add-photo-form label {
+    align-self: flex-start;
+    margin: 0 15px;
+    margin-top: 10px;
+}
+
+#add-photo-form .photo-upload-container label {
+    align-self: flex-start; /* Aligne les titres (labels) à gauche */
+    font-size: 12px; /* Taille de police pour les labels */
+    margin-bottom: 2px; /* Espacement entre le label et l'élément */
+    margin-left: 70px; /* Décale légèrement le label vers la droite */
+}
+  
+#edit-container {
+    cursor: pointer;
+}
+
+#edit-container span {
+    color: black;
+}
+
+  input,
+  select {
+      width: 420px; /* Taille définie pour les cases */
+      height: 41px; /* Hauteur définie pour les cases */
+      padding: 14px;
+      border: none; /* Suppression de la bordure */
+      border-radius: 5px; /* Coins arrondis */
+      font-size: 16px; /* Taille de la police */
+      background: transparent; /* Fond transparent */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+  
+  
+  label {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+      display: block; /* Chaque label sur une ligne */
+  }
+
+/* BOUTON VALIDER */
+#validate {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 237px;
+    cursor: not-allowed;
+    background-color: lightgray;
+}
+
+#validate.valid {
+    cursor: pointer;
+    background-color: #1D6154;
+    color: white;
+}
+
+
+#photo-input {
+    display: none;
+}
+
+#modal-2 {
+    display: none;
+}
+
+.label-photo {
+    width: 173px;
+    height: 36px;
+    background-color: #CBD6DC;
+    color: #306685;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.admin-panel {
+    height: 59px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
