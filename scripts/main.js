@@ -322,7 +322,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 });
 
                 if (response.ok) {
-                    alert("Photo ajoutée avec succès !");
+                   // alert("Photo ajoutée avec succès !"); // Popup désactivée, aucune alerte affichée
+
                     addPhotoForm.reset(); // Réinitialiser le formulaire
                     photoUploadContainer.querySelector("img").remove(); // Supprimer l'image
                     photoUploadContainer.querySelector("i").style.display = "inline-block"; // fait apparaitre l'icône
