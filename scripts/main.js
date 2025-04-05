@@ -225,6 +225,7 @@ async function deleteWork(params) {
 }
 
 
+// Ajout d'une nouvelle photo à la galerie
 
 
 document.addEventListener("DOMContentLoaded", async function () {
