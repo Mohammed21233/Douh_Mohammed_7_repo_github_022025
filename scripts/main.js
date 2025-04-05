@@ -145,8 +145,9 @@ if (token) {
         modal.style.display = 'none';
     });
 
-    // Fermer la modale au clic en dehors du contenu
-    window.addEventListener('click', function(event) {
+    // Fermer la modale lorsqu'on clique en dehors du contenu
+    
+        window.addEventListener('click', function(event) {
         if (event.target === modal || event.target === secondModal) {
             modal.style.display = 'none';
             secondModal.style.display = 'none';
