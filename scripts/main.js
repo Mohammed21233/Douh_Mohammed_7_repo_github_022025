@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 photoUploadContainer.querySelector("label").style.display = "none"; // Cacher le label
                 photoUploadContainer.querySelector("p").style.display = "none"; // Cacher le paragraphe
 
-                // Créer et ajouter l'image sélectionnée avec les bonnes dimensions
+                // Générer et insérer l’image choisie avec les dimensions appropriées
                 const img = document.createElement("img");
                 img.src = url;
                 img.style.width = "200px"; // Largeur fixe pour éviter que ça prenne trop de place
